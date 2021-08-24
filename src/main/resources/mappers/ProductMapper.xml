@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.andrew.demo.mapper.ProductMapper">
+    <update id="updateByPrimaryKey">
+        UPDATE product SET product_count = #{productCount} WHERE id = #{id};
+    </update>
+    <select id="selectByPrimaryKey" resultType="com.andrew.demo.entity.Product">
+        SELECT * FROM product WHERE id = #{id};
+    </select>
+</mapper>
